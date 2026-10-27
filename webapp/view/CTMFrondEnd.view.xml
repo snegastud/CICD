@@ -12,6 +12,10 @@
          <Text id ="name" text="snega"/>
       </VBox>
     
+
+      <VBox id ="vbox">
+         <Text id ="address" text="sivagangai"/>
+      </VBox>
     
     </content>
 
