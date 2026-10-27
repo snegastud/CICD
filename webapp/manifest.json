@@ -1,0 +1,116 @@
+{
+  "_version": "1.89.0",
+  "sap.app": {
+    "id": "ctmservice",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.33.0",
+      "toolsId": "d7e67bfe-1b40-4634-b095-a98b9ddebed7"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "ctmService-ctmaction": {
+          "semanticObject": "ctmService",
+          "action": "ctmaction",
+          "title": "{{ctmService-ctmaction.flpTitle}}",
+          "subTitle": "{{ctmService-ctmaction.flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.153.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ctmservice.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ctmservice.view",
+        "async": true,
+        "viewPath": "ctmservice.view"
+      },
+      "routes": [
+        {
+          "name": "RouteCTMFrondEnd",
+          "pattern": ":?query:",
+          "target": [
+            "TargetCTMFrondEnd"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetCTMFrondEnd": {
+          "id": "CTMFrondEnd",
+          "name": "CTMFrondEnd"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "ctmservice.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "ctmservice"
+  }
+}

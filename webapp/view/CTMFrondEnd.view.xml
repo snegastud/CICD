@@ -1,0 +1,14 @@
+<mvc:View controllerName="ctmservice.controller.CTMFrondEnd"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+  
+    <content>
+    
+      <Text  id="ctms" text="test the application for ctm"/>
+    
+    </content>
+
+    </Page>
+</mvc:View>
